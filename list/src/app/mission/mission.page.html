@@ -8,15 +8,15 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let astronaut of missionData.crew" lines="full">
-      <ion-avatar slot="start">
-        <img src="assets/astronauts/{{astronaut?.photo}}">
-      </ion-avatar>
-      <ion-label>
-        <h2>{{astronaut?.name}}</h2>
-        <p>{{astronaut?.role}}</p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+
+  <ion-card *ngFor="let astronaut of missionData.crew">
+    <img src="assets/astronauts/{{astronaut?.photo}}">
+    <ion-card-header>
+      <ion-card-subtitle>{{astronaut?.role}}</ion-card-subtitle>
+      <ion-card-title>{{astronaut?.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        {{astronaut?.bio}}
+    </ion-card-content>
+  </ion-card>
 </ion-content>

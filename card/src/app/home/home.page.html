@@ -1,12 +1,21 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
-      Ionic Blank
+      Ionic List
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let mission of missionData" detail="true" lines="full" [routerLink]="'/mission/' + mission.id" routerDirection="forward">
+      <ion-thumbnail slot="start">
+        <img src="assets/patches/{{mission.missionPatch}}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{mission.missionName}}</h2>
+        <p>{{mission.missionDuration}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
