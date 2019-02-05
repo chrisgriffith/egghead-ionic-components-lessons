@@ -1,12 +1,24 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
-      Ionic Blank
+      Ionic Virtual Scroll
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+<ion-content>
+  <ion-virtual-scroll [items]="astronautData" [headerFn]="customHeaderFn">
+    <ion-item-divider *virtualHeader="let header" color="medium">
+      {{ header }}
+    </ion-item-divider>
+    <ion-item *virtualItem="let astronaut" detail="true" color="dark">
+      <ion-thumbnail slot="start">
+        <ion-img [src]="astronaut.flag"></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{astronaut.name}} {{astronaut.lastName}}</h2>
+        <p>{{astronaut.missions}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-virtual-scroll>
 </ion-content>
