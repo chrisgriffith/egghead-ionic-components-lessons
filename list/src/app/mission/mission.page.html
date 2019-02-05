@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{missionData?.missionName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let astronaut of missionData.crew" lines="full">
+      <ion-avatar slot="start">
+        <img src="assets/astronauts/{{astronaut?.photo}}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{astronaut?.name}}</h2>
+        <p>{{astronaut?.role}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
