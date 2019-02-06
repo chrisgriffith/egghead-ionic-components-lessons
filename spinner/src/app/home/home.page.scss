@@ -1,1 +1,32 @@
+#trailHero {
+    position: relative;
+    img {
+        width: 100%;
+    }
+    h2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #000;
+        background: rgba(0, 0, 0, 0.6);
+        color: #FFF;
+        padding: 20px 0 20px 5px;
+        margin: 0 !important;
+        border: none;
+    }
+}
 
+#mapLoader {
+    display: flex;
+    height: calc( 100vw * 3/4);
+    background-color: #ccc;
+    ion-spinner {
+        margin: auto;
+    }
+}
+
+#map {
+    display: flex;
+    height: calc( 100vw * 3/4);
+}

@@ -1,12 +1,43 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Ionic Spinner
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+<ion-content>
+  <div id="trailHero">
+    <img src="assets/halfdome.jpg">
+    <h2>Half Dome</h2>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-nowrap>
+        <ion-icon name="walk"></ion-icon>
+        14.8 mi
+      </ion-col>
+      <ion-col text-nowrap>
+        <ion-icon name="trending-up"></ion-icon>
+        5,164 ft
+      </ion-col>
+      <ion-col text-nowrap>
+        <ion-icon name="swap"></ion-icon>
+        Out and Back
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p padding-horizontal>Half Dome is a serious endurance hike taking visitors from the Yosemite Valley, past
+    spectacular views of Vernal and Nevada Falls, Liberty Cap, until you reach the summit with its panoramic views of
+    Yosemite Valley and the High Sierra.</p>
+
+  <div padding>
+    <div id="mapLoader" *ngIf="isMapLoaded == false">
+      <ion-spinner name="bubbles"></ion-spinner>
+    </div>
+    <div id="map" *ngIf="isMapLoaded == true">
+      <img src="assets/map.jpg">
+    </div>
+  </div>
 </ion-content>
