@@ -6,33 +6,24 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-icon slot="start" color="medium" name="mail"></ion-icon>
-      <ion-label>Primary</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-icon slot="start" color="medium" name="people"></ion-icon>
-      <ion-label>Social</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-icon slot="start" color="medium" name="pricetag"></ion-icon>
-      <ion-label>Promotions</ion-label>
-    </ion-item>
+<ion-content>
 
-  </ion-list>
+  <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="primary">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
   <!-- <ion-fab vertical="top" horizontal="end" edge slot="fixed">
-    <ion-fab-button>
+    <ion-fab-button color="primary">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab> -->
 
   <ion-fab vertical="top" horizontal="end" edge slot="fixed">
-    <ion-fab-button>
+    <ion-fab-button color="primary">
       <ion-icon name="share"></ion-icon>
     </ion-fab-button>
-    <ion-fab-list side="bottom">
+    <ion-fab-list>
       <ion-fab-button>
         <ion-icon name="logo-facebook"></ion-icon>
       </ion-fab-button>
@@ -42,7 +33,409 @@
       <ion-fab-button>
         <ion-icon name="logo-twitter"></ion-icon>
       </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="logo-snapchat"></ion-icon>
+      </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
+  <ion-list>
+    <ion-item-divider color="medium">
+      <ion-label>Action Sheet</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-action-sheet-controller</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-action-sheet</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Alert</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-alert-controller</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-alert</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Badge</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-badge</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Button</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-button</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-ripple-effect</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Card</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-card</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-card-content</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-card-header</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-card-subtitle</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-card-title</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Checkbox</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-checkbox</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Chip</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-chip</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Content</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-app</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-content</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Date & Time Pickers</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-datetime</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-picker-controller</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-picker</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Floating Action Button</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-fab-button</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-fab-list</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-fab</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Grid</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-col</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-row</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-grid</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Infinite Scroll</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-infinite-scroll-content</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-infinite-scroll</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Icons</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-icon </ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Input</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-input</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-textarea</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Item</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-item</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-item-divider</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-item-group</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-item-sliding</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-item-options</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-item-option</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-label</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-note</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>List</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-list</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-item-divider</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-virtual-scroll</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Media</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-avatar</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-icon </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-img</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-thumbnail</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Menu</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-menu-button</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-menu-controller</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-menu-toggle</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-menu</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-split-pane</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Modal</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-modal-controller</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-modal</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Navigation</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-nav-pop</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-nav-push</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-nav-set-root</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-nav</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Popover</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-popover-controller</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-popover</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Progress Indicators</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-loading</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-loading-controller</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-progress-bar</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-skeleton-text</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-spinner</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Radio</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-radio-group</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-radio</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Range</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-range</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Refresher</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-refresher-content</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-refresher</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Reorder</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-reorder-group</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-reorder</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Routing</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-route-redirect</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-route</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-router-outlet</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-router</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Searchbar</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-searchbar</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Segment</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-segment-button</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-segment</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Select</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-select-option</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-select</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Slides</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-slide</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-slides</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Tabs</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-tab-bar</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-tab-button</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-tab</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-tabs</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Toast</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-toast-controller</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-toast</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Toggle</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-toggle</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Toolbar</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-toolbar</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-footer</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-header</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-title</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-buttons</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-back-button</ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-label>Typography</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>ion-anchor</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ion-text</ion-label>
+    </ion-item>
+
+  </ion-list>
 
 </ion-content>
