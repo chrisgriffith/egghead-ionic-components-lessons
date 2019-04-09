@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActionSheetController, Platform } from '@ionic/angular';
+import { ActionSheetController} from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,54 +8,47 @@ import { ActionSheetController, Platform } from '@ionic/angular';
 })
 export class HomePage {
 
-  constructor(
-    private actionSheetController: ActionSheetController,
-    private platform: Platform
-  ) {
-    this.presentActionSheet();
-  }
+  constructor(public actionSheetController: ActionSheetController) { }
 
-  displayActionSheet() {
-    this.presentActionSheet();
+  showActionSheet() {
+     this.presentActionSheet();
   }
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
-      header: 'Manage Email',
-      buttons: [{
+     header:'Death Star Plans',
+     buttons: [
+      {
+        text: 'Approve',
+        handler: () => {
+          console.log('approved');
+        }
+      },
+      {
+        text: 'Edit',
+        handler: () => {
+          console.log('edit');
+        }
+      },
+      {
         text: 'Delete',
         role: 'destructive',
-        icon: !this.platform.is('ios') ? 'trash' : null,
         handler: () => {
-          console.log('Delete clicked');
+          console.log('delete');
         }
-      }, {
-        text: 'Forward To',
-        icon: !this.platform.is('ios') ? 'share-alt' : null,
-        handler: () => {
-          console.log('Forward clicked');
-        }
-      }, {
-        text: 'Favorite',
-        icon: !this.platform.is('ios') ? 'star' : null,
-        handler: () => {
-          console.log('Favorite clicked');
-        }
-      }, {
-        text: 'Send',
-        icon: !this.platform.is('ios') ? 'send' : null,
-        handler: () => {
-          console.log('Send clicked');
-        }
-      }, {
+      },
+      {
         text: 'Cancel',
-        icon: !this.platform.is('ios') ? 'close' : null,
         role: 'cancel',
+        icon: 'close',
         handler: () => {
-          console.log('Cancel clicked');
+          console.log('cancel');
         }
-      }]
+      }
+     ]
     });
     await actionSheet.present();
   }
+
+
 }
