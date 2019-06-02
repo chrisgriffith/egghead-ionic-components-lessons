@@ -11,7 +11,7 @@ export class MissionPage implements OnInit {
   private missionData: Array<any>;
 
   constructor(
-    private _apolloMissionService: ApolloMissionsService,
+    private apolloMissionService: ApolloMissionsService,
     private route: ActivatedRoute,
   ) { }
 
@@ -20,7 +20,7 @@ export class MissionPage implements OnInit {
 
   ionViewWillEnter() {
     const missionID = +this.route.snapshot.paramMap.get('missionID');
-    this._apolloMissionService.getMissionData(missionID).subscribe((data) => {
+    this.apolloMissionService.getMissionData(missionID).subscribe((data) => {
       this.missionData = data;
     });
   }

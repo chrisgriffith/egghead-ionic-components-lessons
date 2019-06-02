@@ -11,11 +11,22 @@
   <ion-card *ngFor="let astronaut of missionData.crew">
     <img src="assets/astronauts/{{astronaut?.photo}}">
     <ion-card-header>
-      <ion-card-subtitle>{{astronaut?.role}}</ion-card-subtitle>
       <ion-card-title>{{astronaut?.name}}</ion-card-title>
+      <ion-card-subtitle>{{astronaut?.role}}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-        {{astronaut?.bio}}
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            Born: {{astronaut?.birthDate}}
+          </ion-col>
+          <ion-col>
+            Died: {{astronaut?.deathDate}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <p>{{astronaut?.bio}}</p>
+      <ion-button fill="clear" href="{{astronaut?.bioLink}}">More..</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

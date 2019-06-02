@@ -7,23 +7,23 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApolloMissionsService {
-  private _data: Array<any>;
-  private _dataURL = 'assets/apollo.json';
+  private data: Array<any>;
+  private dataURL = 'assets/apollo.json';
 
   constructor(
     private http: HttpClient
   ) { }
 
   loadData(): Observable<any> {
-    if (this._data !== undefined && this._data.length !== 0) {
-      return of(this._data);
+    if (this.data !== undefined && this.data.length !== 0) {
+      return of(this.data);
     }
-    return this.http.get<any[]>(this._dataURL).pipe(
-      map(data => this._data = data)
+    return this.http.get<any[]>(this.dataURL).pipe(
+      map(data => this.data = data)
     );
   }
 
   getMissionData(theMissionID: number): Observable<any> {
-      return of( this._data.filter( _data => _data.id === theMissionID)[0] );
+      return of( this.data.filter( data => data.id === theMissionID)[0] );
   }
 }

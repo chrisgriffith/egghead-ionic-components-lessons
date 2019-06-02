@@ -10,11 +10,11 @@ export class HomePage implements OnInit {
   private missionData: Array<any> = [];
 
   constructor(
-    private _apolloMissionService: ApolloMissionsService
+    private apolloMissionService: ApolloMissionsService
   ) { }
 
   ngOnInit() {
-    this._apolloMissionService.loadData().subscribe((data) => {
+    this.apolloMissionService.loadData().subscribe((data) => {
       this.missionData = data;
     });
   }
